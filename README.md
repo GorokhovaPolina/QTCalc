@@ -9,4 +9,4 @@ by Golubev Ivan, Gorokhova Polina, Mykhamedov Maksim
 - Design of Calculator you can can see below 👇
 
 
-  ![ChertCalc_design](https://github.com/GorokhovaPolina/QTCalc/assets/128795394/89510383-7227-4c34-9b5c-38c4ca839a7d)# QTCalc
+  ![ChertCalc_design](https://github.com/GorokhovaPolina/QTCalc/assets/128795394/89510383-7227-4c34-9b5c-38c4ca839a7d)
