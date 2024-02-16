@@ -27,7 +27,11 @@ private slots:
     void on_pushButton_equals_released();
     void binary_operation_pressed();
     void on_comboBox_1_activated(int index);
-    // void on_comboBox_2_activated(int index);
-    // void on_comboBox_3_activated(int index);
+    void on_comboBox_2_activated(int index);
+    void on_comboBox_3_activated(int index);
+    std::string from_decimal(std::string& res, int base, int input);
+    int to_decimal(std::string str, int base);
+    int value(char c);
+    char re_value(int num);
 };
 #endif // CHERTCALC_H
