@@ -233,3 +233,55 @@ void ChertCalc::binary_operation_pressed()
 void ChertCalc::on_comboBox_1_activated(int index) {
     selectedBaseIndex = index; // Запомнили СС
 }
+
+void ChertCalc::on_comboBox_2_activated(int index) {
+    selectedBaseIndex = index;
+}
+
+void ChertCalc::on_comboBox_3_activated(int index) {
+    selectedBaseIndex = index;
+}
+
+char re_value(int num) {
+	if ((num >= 0) && (num <= 9))
+		return static_cast<char>(num + '0');
+	return static_cast<char>(num - 10 + 'A');
+}
+
+int value(char c) {
+    if ((c >= '0') && (c <= '9'))
+        return static_cast<int>(c) - '0';
+    return static_cast<int>(c) - 'A' + 10;
+}
+
+int to_decimal(std::string str, int base) {
+    int len = str.size();
+    int power = 1;
+    int num = 0;
+ 
+    for (int i = len - 1; i >= 0; i--) {
+        if (value(str[i]) >= base) {
+            std::cout << "Invalid Number";
+            return -1;
+        }
+ 
+        num += value(str[i]) * power;
+        power *= base;
+    }
+ 
+    return num;
+}
+
+std::string from_decimal(std::string& res, int base, int input) {
+    int index = 0;
+    
+    while (input > 0) {
+        res.push_back(re_value(input % base));
+        index++;
+        input /= base;
+    }
+ 
+    std::reverse(res.begin(), res.end());
+ 
+    return res;
+}
